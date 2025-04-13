@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Image Compressor</h1>
+        <p>Compress your images without sacrificing quality</p>
+        
+        <div class="upload-container">
+            <div id="drop-area">
+                <p>Drag & drop your images here or</p>
+                <input type="file" id="file-input" accept="image/*" multiple>
+                <label for="file-input" class="file-input-label">Select Files</label>
+            </div>
+        </div>
+        
+        <div class="settings">
+            <div class="setting-group">
+                <label for="quality-slider">Quality:</label>
+                <input type="range" id="quality-slider" min="70" max="100" value="90">
+                <span id="quality-value">90%</span>
+            </div>
+            <div class="setting-group">
+                <label for="max-width">Max Width (px):</label>
+                <input type="number" id="max-width" min="100" max="5000" value="1920">
+            </div>
+        </div>
+        
+        <div id="image-list" class="image-list">
+            <!-- Images will be added here by JavaScript -->
+        </div>
+        
+        <div class="actions">
+            <button id="compress-btn" disabled>Compress Images</button>
+            <button id="download-all-btn" disabled>Download All</button>
+        </div>
+        
+        <div id="results" class="results">
+            <!-- Results will be shown here -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
